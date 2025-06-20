@@ -70,7 +70,7 @@ python manage.py runserver
 
 ---
 
-## ⚛️ Frontend Setup
+⚛️ Frontend Setup
 # 1. Open another terminal
 
 # 2. From root folder, navigate to the frontend directory
