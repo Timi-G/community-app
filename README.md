@@ -10,6 +10,7 @@ A simplified community platform where users can register, create groups, and pos
 - Python 3.x
 - Django
 - Django REST Framework
+- Django Cors Headers
 - MySQL
 
 ### 🎨 Frontend
@@ -36,7 +37,7 @@ Ensure the following are installed:
 ```bash
 # 1. Clone the repo and navigate into backend
 git clone https://github.com/Timi-G/community-app.git
-cd jendz/backend
+cd backend
 
 # 2. Create virtual environment
 python -m venv env
@@ -67,25 +68,28 @@ python manage.py createsuperuser
 # 7. Run development server
 python manage.py runserver
 
+---
 
 ## ⚛️ Frontend Setup
-# 1. Navigate to the frontend directory
-cd ../frontend
+# 1. Open another terminal
 
-# 2. Install dependencies
+# 2. From root folder, navigate to the frontend directory
+cd frontend/community-app
+
+# 3. Install dependencies
 npm install
 
 ## Install Tailwindcss (If tailwind.config.js isn't created automatically in the frontend folder)
 npm install -D tailwindcss@3
 npx tailwindcss init
 
-# 3. Configure base URL in axios.js (e.g., src/api/axios.js)
+# 4. Configure base URL in axios.js (e.g., src/api/axios.js)
 export default axios.create({
-  baseURL: "http://localhost:8000/api",
+  baseURL: "http://localhost:8000",
 });
 
-# 4. Build the React app (Optional)
+# 5. Build the React app (Optional)
 npm run build
 
-# 5. Start the React development server
+# 6. Start the React development server
 npm run start
