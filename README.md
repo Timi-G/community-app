@@ -67,10 +67,12 @@ python manage.py createsuperuser
 
 # 7. Run development server
 python manage.py runserver
+```
 
 ---
 
-⚛️ Frontend Setup
+## ⚛️ Frontend Setup
+```bash
 # 1. Open another terminal
 
 # 2. From root folder, navigate to the frontend directory
