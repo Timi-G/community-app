@@ -35,4 +35,4 @@ services:
     env:
       MYSQL_DATABASE: mydatabase
       MYSQL_USER: myuser
-      MYSQL_PASSWORD: jendz123
+      MYSQL_PASSWORD: mypassword

@@ -29,7 +29,6 @@ DEBUG = config("DEBUG", default=False, cast=bool)
 
 ALLOWED_HOSTS = config("ALLOWED_HOSTS").split(",")
 
-
 # Application definition
 
 INSTALLED_APPS = [
