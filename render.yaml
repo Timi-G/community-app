@@ -14,8 +14,6 @@ services:
         value: core.settings
       - key: SECRET_KEY
         generateValue: true
-      - key: ALLOWED_HOSTS
-        value: community-app-43km.onrender.com
       - key: DEBUG
         value: "False"
       - key: DB_NAME
