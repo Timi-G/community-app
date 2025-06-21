@@ -23,12 +23,12 @@ services:
       - key: DB_PASSWORD
         value: mypassword
       - key: DB_HOST
-        value: mysql-db
+        value: mysqldb
       - key: DB_PORT
         value: 3306
 
   - type: mysql
-    name: mysql-db
+    name: mysqldb
     plan: standard
     disk:
       sizeGB: 10
