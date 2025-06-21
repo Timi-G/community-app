@@ -6,6 +6,4 @@ router = DefaultRouter()
 router.register(r'groups', GroupViewSet)
 router.register(r'posts', PostViewSet)
 
-urlpatterns = [
-    path('', include(router.urls)),
-]
+urlpatterns = router.urls

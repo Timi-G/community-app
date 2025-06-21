@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 import os
+import dj_database_url
+
 from pathlib import Path
 
 from decouple import config
@@ -92,14 +94,11 @@ AUTH_USER_MODEL = 'community.User'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': config("DB_NAME"),
-        'USER': config("DB_USER"),
-        'PASSWORD': config("DB_PASSWORD"),
-        'HOST': config("DB_HOST"),
-        'PORT': config("DB_PORT", default="3306"),
-    }
+    'default': dj_database_url.parse(
+        config("DATABASE_URL"),
+        conn_max_age=600,  # recommended for production
+        ssl_require=False   # make secure connection to Railway
+    )
 }
 
 # Password validation
