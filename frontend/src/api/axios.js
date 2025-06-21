@@ -1,9 +1,7 @@
 import axios from 'axios';
 
-const baseURL = 'http://127.0.0.1:8000';  // your Django server
-
 const api = axios.create({
-  baseURL,
+  baseURL: import.meta.env.REACT_APP_API_BASE_URL || "http://localhost:8000",
 });
 
 api.interceptors.request.use((config) => {

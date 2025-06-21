@@ -76,7 +76,7 @@ python manage.py runserver
 # 1. Open another terminal
 
 # 2. From root folder, navigate to the frontend directory
-cd frontend/community-app
+cd frontend
 
 # 3. Install dependencies
 npm install
