@@ -17,12 +17,12 @@ services:
       - key: DEBUG
         value: "False"
       - key: DB_NAME
-        value: mydatabase
+        value: railway
       - key: DB_USER
-        value: myuser
+        value: root
       - key: DB_PASSWORD
-        sync: mypassword
+        sync: false
       - key: DB_HOST
-        value: mysql-db
+        value: mysql.railway.internal
       - key: DB_PORT
         value: 3306
