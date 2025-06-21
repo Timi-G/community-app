@@ -14,6 +14,8 @@ services:
         value: core.settings
       - key: SECRET_KEY
         generateValue: true
+      - key: ALLOWED_HOSTS
+        value: community-app-43km.onrender.com
       - key: DEBUG
         value: "False"
       - key: DB_NAME
@@ -23,12 +25,12 @@ services:
       - key: DB_PASSWORD
         value: mypassword
       - key: DB_HOST
-        value: mysqldb
+        value: mysql-db
       - key: DB_PORT
         value: 3306
 
   - type: mysql
-    name: mysqldb
+    name: mysql-db
     plan: standard
     disk:
       sizeGB: 10
