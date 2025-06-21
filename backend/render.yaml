@@ -21,18 +21,8 @@ services:
       - key: DB_USER
         value: myuser
       - key: DB_PASSWORD
-        value: mypassword
+        sync: mypassword
       - key: DB_HOST
         value: mysql-db
       - key: DB_PORT
         value: 3306
-
-  - type: mysql
-    name: mysql-db
-    plan: standard
-    disk:
-      sizeGB: 10
-    env:
-      MYSQL_DATABASE: mydatabase
-      MYSQL_USER: myuser
-      MYSQL_PASSWORD: mypassword
