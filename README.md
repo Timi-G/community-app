@@ -105,56 +105,53 @@ npm run start
 
 ## 📌 Assumptions
 - User Simplicity
-Assumes users only need a username and email to register (no email verification or profile settings).
+  - Assumes users only need a username and email to register (no email verification or profile settings).
 
 - Group Permissions
-Only group creators can post/edit/delete in their groups. Assumes one user manages a group entirely.
+  - Only group creators can post/edit/delete in their groups. Assumes one user manages a group entirely.
 
 - Authentication
   - Assumes token-based auth (via DRF TokenAuth) is sufficient for login sessions.
 
-  -Assumes that storing tokens in localStorage is safe enough (no refresh tokens or HTTP-only cookies).
+  - Assumes that storing tokens in localStorage is safe enough (no refresh tokens or HTTP-only cookies).
 
 - Single-Region Hosting
-
-- Assumes all services (frontend, backend, DB) are hosted in similar regions to reduce latency.
+  - Assumes all services (frontend, backend, DB) are hosted in similar regions to reduce latency.
 
 - Simple Public Feed Logic
-
-- Assumes all posts across all groups can be shown publicly with no privacy or filtering logic.
+  - Assumes all posts across all groups can be shown publicly with no privacy or filtering logic.
 
 - No Real-time Requirements
-
-- Assumes real-time updates (e.g. new posts appearing instantly) are not required.
+  - Assumes real-time updates (e.g. new posts appearing instantly) are not required.
 
 ## ❗ Limitations
 - 🚫 No Email Verification or Reset
-There's no system for verifying user email or resetting forgotten passwords.
+  - There's no system for verifying user email or resetting forgotten passwords.
 
 - 🔐 Auth Token Vulnerabilities
   - Storing auth tokens in localStorage is vulnerable to XSS attacks.
   - No support for refresh tokens or token expiry.
 
 - 📤 No Pagination or Filtering
-The /api/groups/ and /api/posts/ endpoints return all records, which may not scale with large data.
+  - The /api/groups/ and /api/posts/ endpoints return all records, which may not scale with large data.
 
 - 🔎 Limited Search or Discovery
-No keyword search, sorting, or category tagging for groups or posts.
+  - No keyword search, sorting, or category tagging for groups or posts.
 
 - 📱 Limited Responsiveness
-May not be fully optimized for mobile users without additional layout handling.
+  - May not be fully optimized for mobile users without additional layout handling.
 
 - 🧪 No Testing Layer
-There are no unit tests, integration tests, or end-to-end tests in the backend or frontend.
+  - There are no unit tests, integration tests, or end-to-end tests in the backend or frontend.
 
 - 💬 No Comment or Like System
-Users can only create posts; there's no interaction model like comments, likes, or replies.
+  - Users can only create posts; there's no interaction model like comments, likes, or replies.
 
 - 📦 Monolithic Deployment
-Backend and frontend are deployed separately but not orchestrated as a unified service (e.g. with Docker or Kubernetes).
+  - Backend and frontend are deployed separately but not orchestrated as a unified service (e.g. with Docker or Kubernetes).
 
 - 🔁 No Background Jobs / Asynchronous Handling
-All operations (like sending emails, post-processing) are synchronous — no Celery or task queue.
+  - All operations (like sending emails, post-processing) are synchronous — no Celery or task queue.
 
 - 👤 No Role Management
-All authenticated users have the same level of permissions except for ownership rules.
+  - All authenticated users have the same level of permissions except for ownership rules.
