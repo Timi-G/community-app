@@ -22,7 +22,7 @@ services:
         value: root
       - key: DB_PASSWORD
         sync: false
-      - key: DB_HOST
-        value: mysql-production-397e.up.railway.app
+      - key: DATABASE_URL
+        value: mysql://root:GwJaywNKaCSzqycrFuyDWkfCdhsptzfE@shortline.proxy.rlwy.net:28404/railway
       - key: DB_PORT
         value: 3306
