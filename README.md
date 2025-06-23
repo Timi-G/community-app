@@ -108,7 +108,7 @@ npm run start
   - Assumes users only need a username and email to register (no email verification or profile settings).
 
 - Group Permissions
-  - Only group creators can post/edit/delete in their groups. Assumes one user manages a group entirely.
+  - Only group creators can delete their group information. Assumes any user can post in a group.
 
 - Authentication
   - Assumes token-based auth (via DRF TokenAuth) is sufficient for login sessions.
