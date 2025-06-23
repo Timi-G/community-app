@@ -19,6 +19,12 @@ A simplified community platform where users can register, create groups, and pos
 - Axios
 - React Router
 
+### ☁️ Deployment & Infrastructure
+- Vercel (Backend Hosting)
+- Render (Backend Hosting)
+- Railway (Cloud Infra)
+- CI/CD (Git + GitHub)
+
 ---
 
 ## 🛠️ Setup Instructions
